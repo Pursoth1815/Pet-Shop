@@ -1,0 +1,41 @@
+<!-- prettier-ignore -->
+{% extends 'shop/layouts/main.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+<!--Custom CSS-->
+<link rel="stylesheet" href="{% static 'css/card.css'%}" type="text/css" />
+
+<section class="py-2 my-5">
+  <div class="card mx-5 shadow-lg p-3 bg-body rounded col-lg-6">
+    <div class="row g-0">
+      <div class="col-md-8">
+        <img
+          class="card-img-top"
+          src="{{products.product_image.url}}"
+          alt="Title"
+        />
+      </div>
+      <div class="col-md-4">
+        <div class="card ms-3">
+          <div class="card-header bg-dark text-light mb-3">
+            Pet Name : {{products.pet_name}}
+          </div>
+          <div class="card-body">
+            <p class="card-title">Owner Name : {{products.owner_name}}</p>
+            <hr />
+            <p class="card-text">Number : {{products.owner_number}}</p>
+            <hr />
+            <p class="card-text">Prize : ₹{{products.product_price}}</p>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

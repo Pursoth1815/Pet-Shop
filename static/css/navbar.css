@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@500&family=Roboto+Slab:wght@100;200;300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Philosopher&display=swap');
+
+:root {
+    --color-1:#f6f5fa;
+    --color-2:#00BFFF;
+    --color-3:#70606069;
+    --color-4:#FFB30D;
+    --color-5:#24252A;
+}
+
+.logo{
+    margin-right: auto;
+    margin-left: 20px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.logo-img{
+    transition: transform 0.8s ease 0s;
+}
+
+.logo-img:hover{
+    transform: rotate(360deg);
+}
+
+#txt-col{
+    color: var(--color-2);
+    font-weight: 400;
+    font-size: 25px;
+}
+
+#ul-hover{
+    transition: all 0.3s ease 0s;
+}
+
+#ul-hover:hover{
+    color: var(--color-2);
+}
+
+.nav-links li:last-child{
+    padding-right: 50px;
+}
+
+

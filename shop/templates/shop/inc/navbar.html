@@ -1,0 +1,74 @@
+{% load static %}
+
+<!--Custom CSS-->
+<link rel="stylesheet" href="{% static 'css/navbar.css'%}" type="text/css" />
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid d-flex justify-content-end align-items-center">
+    <a class="navbar-brand hstack gap-3 logo" href="#">
+      <img
+        src="{% static 'img/logo.png'%}"
+        alt=""
+        width="60"
+        height="60"
+        class="d-inline-block align-text-top logo-img"
+      />
+      <span id="txt-col">NewBie</span>
+    </a>
+    {% if request.user.is_authenticated %}
+
+    <ul class="nav nav-pills gap-3 nav-links fw-bold fs-6">
+      <li class="nav-item">
+        <a
+          class="nav-link text-light"
+          aria-current="page"
+          href="{% url 'profile' %}"
+          ><span id="ul-hover"
+            ><i class="uil uil-user-md"></i> {{request.user | upper }}</span
+          ></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'collections' %}"
+          ><span id="ul-hover"
+            ><i class="uil uil-comment-heart"></i> Collections</span
+          ></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'logout' %}"
+          ><span id="ul-hover"
+            ><i class="uil uil-sign-out-alt"></i> Logut</span
+          ></a
+        >
+      </li>
+    </ul>
+
+    {% else %}
+    <ul class="nav nav-pills gap-3 nav-links fw-bold fs-6">
+      <li class="nav-item">
+        <a
+          class="nav-link text-light"
+          aria-current="page"
+          href="{% url 'home' %}"
+          ><span id="ul-hover"><i class="uil uil-home"></i> Home</span></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'contact' %}"
+          ><span id="ul-hover"
+            ><i class="uil uil-headphones-alt"></i> Contact Us</span
+          ></a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="{% url 'register' %}"
+          ><span id="ul-hover"
+            ><i class="uil uil-sign-in-alt"></i> Register</span
+          ></a
+        >
+      </li>
+    </ul>
+    {% endif %}
+  </div>
+</nav>

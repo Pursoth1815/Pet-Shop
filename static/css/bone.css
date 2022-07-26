@@ -1,0 +1,68 @@
+/* Landscape tablets and medium desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    .row {
+      min-height: 50vh !important;
+    }
+  }
+  /* Large desktops and laptops */
+  @media (min-width: 1200px) {
+    .row {
+      min-height: 100vh !important;
+    }
+  }
+
+  .bg-imgs {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .fish-bone1 {
+    position: absolute;
+    top: 11em;
+    animation: rotating 5s linear infinite;
+  }
+  
+  .fish-bone2 {
+    position: absolute;
+    top: 43em;
+    left: 80em;
+    animation: rotating 5s alternate-reverse infinite;
+  
+  }
+  .fish-bone3 {
+    position: absolute;
+    top: 11em;
+    left: 77em;
+    animation: rotating 8s linear infinite;
+  }
+
+  .dog-bone1 {
+    position: absolute;
+    top: 16em;
+    left: 88em;
+    animation: rotating 5s linear infinite;
+  }
+  
+  .dog-bone2 {
+    position: absolute;
+    bottom: 10em;
+    animation: rotating 5s alternate-reverse infinite;
+  }
+  
+  .dog-bone3 {
+    position: absolute;
+    top: 18em;
+    left: 62em;
+    animation: rotating 8s alternate infinite;
+  }
+
+  @keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+ 

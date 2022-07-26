@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+:root {
+    --color-1:#f6f5fa;
+    --color-2:#00BFFF;
+    --color-3:#70606069;
+    --color-4:#FFB30D;
+    --color-5:#24252A;
+}
+.box{
+    position: relative;
+    transform: translate(165px);
+    margin: 0;
+    padding: 0;
+    background: var(--color-2);
+    width: 50rem;
+    height: 30rem;
+}
+.custom-card{
+    position: absolute;
+    top: 22%;
+    right: 28.6%;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-1);
+    border-style: none;
+    border-bottom-left-radius: 10% 50%;
+    border-top-left-radius: 10% 50%;
+}
+
+.row{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type='email'], input[type='text']{
+    margin-left: 10px;
+}
+textarea{
+    margin-left: 10px;
+}

@@ -1,0 +1,48 @@
+<!-- prettier-ignore -->
+{% extends 'shop/layouts/main.html' %}
+
+{% block content %}
+
+<style>
+  
+.card-imgs {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+</style>
+
+<section class="bg-light py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-3">{{catagory}}'s</h4>
+        <hr style="border-color: #b8bfc2" />
+      </div>
+        {% for item in products %}
+        <div class="col-md-4 col-lg-3">
+          <div class="card my-3">
+            <img
+              src="{{item.product_image.url}}"
+              class="img-fluid img-thumbnail card-image-top card-imgs"
+              alt="Categories"
+            />
+            <a href="{% url 'product_details' catagory item.pet_name %}">
+              <div class="card-body d-flex justify-content-between">
+                <h5 class="card-title text-primary fw-bold text-info">{{item.pet_name}}</h5>
+                <p class="card-text">
+                  <span class="float-start text-info" 
+                    >₹{{item.product_price | stringformat:'d'}}</span
+                  >
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock content %}

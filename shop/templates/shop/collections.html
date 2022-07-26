@@ -1,0 +1,54 @@
+<!-- prettier-ignore -->
+{% extends 'shop/layouts/main.html' %} 
+
+{% block content %}
+<!-- prettier-ignore -->
+{% include 'shop/inc/message.html' %}
+
+<section class="text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light">Best Sellers</h1>
+      <p class="lead text-muted">
+        Our most products based on sales. Updated Hourly
+      </p>
+      <a href="{% url 'vendor' %}">
+        <button type="button" class="btn btn-outline-primary">Vendor ?</button>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="bg-light py-2 my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="mb-3">Collections</h4>
+        <hr style="border-color: #b8bfc2" />
+      </div>
+
+      {% for item in catagory %}
+      <div class="col-md-4 col-lg-3">
+        <div class="card my-3">
+          <img
+            src="{{item.image.url}}"
+            class="img-fluid img-thumbnail card-image-top card-imgs"
+            alt="Categories"
+            style="width: 100%; object-fit: cover; height: 15vw"
+          />
+          <a href="{% url 'collections' item.name %}">
+            <div class="card-body card-body-style">
+              <h5
+                class="card-title text-primary fw-bold text-info"
+                style="text-align: center"
+              >
+                {{item.name}}
+              </h5>
+            </div>
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock content %}

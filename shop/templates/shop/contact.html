@@ -1,0 +1,80 @@
+<!-- prettier-ignore -->
+{% extends 'shop/layouts/main.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+
+<div class="container">
+  <div class="box mt-lg-4"></div>
+  <div class="d-flex justify-content-center p-3 border-light">
+    <div class="card text-dark custom-card w-50 h-50">
+      <div class="card-body">
+        <h4 class="card-title text-center mb-lg-5">Contact Us</h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-lg-3">
+              <input
+                type="email"
+                class="form-control mb-lg-3"
+                name=""
+                id=""
+                aria-describedby="emailHelpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <label for="" class="form-label"> Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-lg-3">
+              <input
+                type="text"
+                class="form-control mb-lg-3"
+                name=""
+                id=""
+                aria-describedby="emailHelpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <label for="" class="form-label"> Number</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-lg-3">
+              <input
+                type="text"
+                class="form-control mb-lg-3"
+                name=""
+                id=""
+                aria-describedby="emailHelpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <label for="" class="form-label"> Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-lg-3">
+              <textarea class="form-control" name="" id="" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <label for="" class="form-label"> Complaint</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

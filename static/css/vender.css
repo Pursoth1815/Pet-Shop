@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,200;8..144,300;8..144,500&display=swap');
+:root {
+    --color-1:#f6f5fa;
+    --color-2:#00BFFF;
+    --color-3:#70606069;
+    --color-4:#FFB30D;
+    --color-5:#24252A;
+}
+
+.custombody{
+    font-family: 'Roboto Serif', serif;
+}
+
+.card-imgs {
+    /* width: 100%; */
+    height: 14vw;
+    object-fit: cover;
+  }
+
+  @media (min-width: 700px) and (max-width: 991px) {
+    .card-imgs {
+      height: 25vh;
+    }
+    #propic{
+      min-width: 200px;
+      max-height: 185px;
+    }
+  }
+
+  #propic{
+    cursor: pointer;
+    display: block;
+    height: 27vh;
+    opacity: 0 !important;
+    position: absolute;
+    width: 13vw;
+}
+
+.selectbtn{
+  width: 100%;
+  height: 5vh;
+  text-align: center;
+  font-family: 'Roboto Serif', serif;
+}
+
+.optionbtn{
+  margin-top: 5px;
+}

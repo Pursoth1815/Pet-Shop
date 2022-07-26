@@ -1,0 +1,95 @@
+<!-- prettier-ignore -->
+{% extends 'shop/layouts/main.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<!--Custom CSS-->
+<link rel="stylesheet" href="{% static 'css/bone.css'%}" type="text/css" />
+
+<body>
+  <div class="container p-2 mb-0">
+    <div class="row mb-0 d-flex align-items-center">
+      <div class="col-md-5 d-flex flex-column justify-content-center">
+        <div class="lh-1 mb-3">
+          <p class="text-info fs-1 fw-bold text-uppercase mb-0">NewBie</p>
+          <p class="fs-1 fw-bold mt-0 text-dark">Welcomes You</p>
+        </div>
+        <p class="fw-normal">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam
+          maiores magnam enim esse tempora, tempore vero labore nisi sint modi.
+          <span class="d-md-none d-lg-block"
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
+            dolores!.</span
+          >
+        </p>
+      </div>
+      <div class="col-md-7">
+        <div class="bg-imgs">
+          <img
+            src="{% static 'img/bg.jpg' %}"
+            class="img-fluid rounded-top"
+            alt=""
+          />
+        </div>
+        <div class="fish-bone1">
+          <img
+            id="imgs"
+            src="{% static 'img/fishbone.png' %}"
+            class="img-fluid rounded-top d-md-none d-sm-none d-lg-block"
+            alt=""
+            width="30px"
+          />
+        </div>
+        <div class="fish-bone2">
+          <img
+            id="imgs"
+            src="{% static 'img/fishbone.png' %}"
+            class="img-fluid rounded-top d-md-none d-sm-none d-lg-block"
+            alt=""
+            width="30px"
+          />
+        </div>
+        <div class="fish-bone3">
+          <img
+            id="imgs"
+            src="{% static 'img/fishbone.png' %}"
+            class="img-fluid rounded-top d-md-none d-sm-none d-lg-block"
+            alt=""
+            width="30px"
+          />
+        </div>
+        <div class="dog-bone1">
+          <img
+            id="imgs"
+            src="{% static 'img/dogbone.png' %}"
+            class="img-fluid rounded-top d-md-none d-sm-none d-lg-block"
+            alt=""
+            width="50px"
+          />
+        </div>
+        <div class="dog-bone2">
+          <img
+            id="imgs"
+            src="{% static 'img/dogbone.png' %}"
+            class="img-fluid rounded-top d-md-none d-sm-none d-lg-block"
+            alt=""
+            width="50px"
+          />
+        </div>
+        <div class="dog-bone3">
+          <img
+            id="imgs"
+            src="{% static 'img/dogbone.png' %}"
+            class="img-fluid rounded-top d-md-none d-sm-none d-lg-block"
+            alt=""
+            width="50px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock content %}
