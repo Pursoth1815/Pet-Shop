@@ -14,6 +14,19 @@ def home(request):
 
 
 def contact(request):
+    if request.method == 'POST':
+        form = Contact()
+        query = request.POST
+        name = query.get('name')
+        email = query.get('email')
+        message = query.get('message')
+
+        form.name = name
+        form.email = email
+        form.message = message
+        form.save()
+        messages.success(request, "Data Added Sucessfully")
+        return redirect('contact')
     return render(request, "shop/contact.html")
 
 

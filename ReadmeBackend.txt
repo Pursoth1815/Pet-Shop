@@ -19,7 +19,7 @@ def __str__(self):
 
 
 class Product(models.Model):
-    category = models.ForeignKey(Catagory, on_delete=models.CASCADE)
+    catagory = models.ForeignKey(Catagory, on_delete=models.CASCADE)
     owner_name = models.CharField(max_length=150, null=False, blank=False)
     pet_name = models.CharField(max_length=150, null=False, blank=False)
     product_image = models.ImageField(
